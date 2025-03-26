@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>1</title>
+    <style>
+        @keyframes ani1 {
+            from {
+                transform: scale(3);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            text-align: center;
+            background: #222222;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .pic {
+            width: 80%;
+            max-width: 1000px;
+            box-shadow: 5px 5px 10px cyan;
+            animation: ani1 1s ease-out;
+            object-fit: cover;
+            margin-top: 50px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/cross.png" alt="Back to homepage">
+        </a>
+    </header>
+
+    <img src="images/3.jpg" class="pic" alt="Main Image">
+</body>
+</html>
