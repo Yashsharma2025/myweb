@@ -2,100 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <h1>
-        <font color="teal" face="Arial, sans-serif">
-            <u><i>Welcome to My Profile </i></u>
-        </font>
-    </h1>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
 
-    <!-- Fixed image source -->
-    <img src="boy.jpg" width="10%" alt="Profile Image"> 
-    <p>Yash Profile</p>
-    <hr color="black" size="10" width=""/>
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            min-width: 160px;
+            padding: 0;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 12px;
+            text-align: left;
+            color: white;
+        }
+
+        #main {
+            width: 70%;
+            margin: 50px auto;
+            font-size: 18px;
+            border: 1px black solid;
+            text-align: justify;
+            padding: 30px;
+        }
+
+        img {
+            width: 10%;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-
-<style>
-#main {
-    width: 70%;
-    margin: auto;
-    font-size: 20px;
-    border: 1px black solid;
-    text-align: justify;
-    padding: 30px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-    position: relative;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li:hover > ul {
-    display: block;
-}
-
-nav ul li ul li a {
-    padding: 12px;
-    text-align: left;
-    color: white;
-}
-
-nav ul li ul li a:hover {
-    background-color: #111;
-}
-</style>
 
 <body>
 
-    <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li> <!-- Set to '#' for reload -->
-            <!-- Link to Practice Work Page -->
-            <li><a href="pratice work.html">Practice Work</a></li> 
-            <li><a href="index2.html" target="_blank">Photos</a></li> 
+            <li><a href="#">Home</a></li>
+            <li><a href="pratice work.html">Practice Work</a></li>
+            <li><a href="index2.html" target="_blank">Photos</a></li>
             <li><a href="#">Videos</a></li>
         </ul>
     </nav>
 
+    <img src="boy.jpg" alt="Profile Image">
+    <p style="text-align:center;">Yash Profile</p>
+    
+    <hr color="black" size="10" width=""/>
+
     <div id="main">
-        <h3> About Me </h3>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+        <h3>About Me</h3>
+        <p> </p>
     </div>
 
 </body>
