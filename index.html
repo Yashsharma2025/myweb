@@ -9,11 +9,10 @@
             padding: 0;
             margin: 0;
             background-color: #333;
-            overflow: hidden;
         }
 
         nav ul li {
-            float: left;
+            display: inline-block;
         }
 
         nav ul li a {
@@ -28,38 +27,36 @@
             background-color: #111;
         }
 
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #333;
-            min-width: 160px;
-            padding: 0;
-        }
-
-        nav ul li:hover > ul {
-            display: block;
-        }
-
-        nav ul li ul li a {
-            padding: 12px;
-            text-align: left;
-            color: white;
-        }
-
         #main {
-            width: 70%;
-            margin: 50px auto;
-            font-size: 18px;
-            border: 1px black solid;
-            text-align: justify;
-            padding: 30px;
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         img {
-            width: 10%;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #333;
+            width: 50%;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -78,11 +75,15 @@
     <img src="boy.jpg" alt="Profile Image">
     <p style="text-align:center;">Yash Profile</p>
     
-    <hr color="black" size="10" width=""/>
+    <hr />
 
     <div id="main">
         <h3>About Me</h3>
-        <p> </p>
+        <p>Hi, I’m [Your Name], a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life. Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.
+
+I’ve worked on a variety of projects from ads and social media content to short films and music videos—always aiming to tell a story visually. What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.
+
+Ultimately, for me, it’s all about blending creativity with technology to produce something that stands out and speaks to people. I’m always looking forward to new challenges and opportunities to keep pushing my skills further!</p>
     </div>
 
 </body>
