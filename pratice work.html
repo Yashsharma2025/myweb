@@ -17,7 +17,6 @@
             color: white;
             padding: 20px 0;
             margin: 0;
-            border-bottom: 5px solid #ff9800;
         }
 
         ul {
@@ -38,11 +37,6 @@
             background-color: #333;
             padding: 12px 20px;
             border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        ul li a:hover {
-            background-color: #555;
         }
 
         div {
@@ -51,57 +45,10 @@
             padding: 20px;
             background-color: white;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        #home {
-            background-color: #e0f7fa;
-        }
-
-        #image-gallery {
-            background-color: #ffecb3;
-        }
-
-        #list-html {
-            background-color: #c8e6c9;
-        }
-
-        #table {
-            background-color: #f1f8e9;
-            padding: 10px;
-        }
-
-        #login-form {
-            background-color: #fff3e0;
-        }
-
-        #banner {
-            background-color: #fce4ec;
-        }
-
-        .data-item {
-            padding: 8px;
-            margin: 10px 0;
-            background-color: #eeeeee;
-            border-radius: 5px;
-        }
-
-        /* Adding some creative touches */
-        .data-item:hover {
-            background-color: #d3d3d3;
-        }
-
-        .section-header {
-            text-align: center;
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .section-content {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
+        #image-gallery, #list-html, #table, #login-form, #banner, #home {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -120,45 +67,37 @@
     </ul>
 
     <div id="image-gallery">
-        <div class="section-header">Image Gallery</div>
-        <div class="section-content">This is where your images will go.</div>
+        <h2>Image Gallery</h2>
+        <p>Images will go here.</p>
     </div>
 
     <div id="list-html">
-        <div class="section-header">List in HTML</div>
-        <div class="section-content">
-            <div class="data-item">Item 1</div>
-            <div class="data-item">Item 2</div>
-            <div class="data-item">Item 3</div>
-        </div>
+        <h2>List in HTML</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
     </div>
 
     <div id="table">
-        <div class="section-header">Table (Simplified)</div>
-        <div class="section-content">
-            <div class="data-item">Header 1: Data 1</div>
-            <div class="data-item">Header 2: Data 2</div>
-            <div class="data-item">Header 3: Data 3</div>
-        </div>
+        <h2>Table</h2>
+        <p>Data displayed in a simple way.</p>
     </div>
 
     <div id="login-form">
-        <div class="section-header">Login Form</div>
-        <div class="section-content">
-            <div class="data-item">Username Field</div>
-            <div class="data-item">Password Field</div>
-            <div class="data-item">Login Button</div>
-        </div>
+        <h2>Login Form</h2>
+        <p>Login form content here.</p>
     </div>
 
     <div id="banner">
-        <div class="section-header">Creating Banner in HTML</div>
-        <div class="section-content">This section will teach how to create a simple banner.</div>
+        <h2>Creating Banner in HTML</h2>
+        <p>Banner content will be displayed here.</p>
     </div>
 
     <div id="home">
-        <div class="section-header">Home</div>
-        <div class="section-content">Welcome to the home section.</div>
+        <h2>Home</h2>
+        <p>Welcome to the home section.</p>
     </div>
 
 </body>
