@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Photo Gallery</title>
@@ -35,16 +35,23 @@
             animation: fadeout 2s;
         }
 
+        .pic-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .pic {
-            width: 20%;
+            width: 90%;
+            max-width: 300px;
+            margin: 10px;
             border-radius: 20px;
-            margin: 60px;
             box-shadow: 5px 5px 10px cyan;
             transition: 0.50s;
         }
 
         .pic:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
             cursor: pointer;
         }
 
@@ -64,38 +71,42 @@
             background-color: #004d40;
             cursor: pointer;
         }
+
+        /* Mobile Devices */
+        @media (max-width: 480px) {
+            .pic {
+                width: 100%;
+            }
+        }
+
+        /* Tablets and iPads */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .pic {
+                width: 45%;
+            }
+        }
+
+        /* Laptops and Desktops */
+        @media (min-width: 1025px) {
+            .pic {
+                width: 30%;
+            }
+        }
     </style>
 </head>
-
 <body>
     <header>
         Web Photo Gallery
     </header>
 
-    <!-- Image links to individual pages -->
-    <a href="1.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/1.jpg" class="pic" alt="Image 1">
-    </a>
-
-    <a href="2.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/2.jpg" class="pic" alt="Image 2">
-    </a>
-
-    <a href="3.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/3.jpg" class="pic" alt="Image 3">
-    </a>
-
-    <a href="4.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/4.jpg" class="pic" alt="Image 4">
-    </a>
-
-    <a href="5.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/5.jpg" class="pic" alt="Image 5">
-    </a>
-
-    <a href="6.html">
-        <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/6.jpg" class="pic" alt="Image 6">
-    </a>
+    <div class="pic-container">
+        <a href="1.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/1.jpg" class="pic" alt="Image 1"></a>
+        <a href="2.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/2.jpg" class="pic" alt="Image 2"></a>
+        <a href="3.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/3.jpg" class="pic" alt="Image 3"></a>
+        <a href="4.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/4.jpg" class="pic" alt="Image 4"></a>
+        <a href="5.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/5.jpg" class="pic" alt="Image 5"></a>
+        <a href="6.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/6.jpg" class="pic" alt="Image 6"></a>
+    </div>
 
     <a href="pratice work.html" class="back-button">Back to Practice</a>
 </body>
