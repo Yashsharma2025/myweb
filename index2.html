@@ -8,16 +8,22 @@
             to { opacity: 1; }
         }
 
+        body {
+            background: #222222;
+            text-align: center;
+            animation: fadeout 2s;
+            font-family: Arial, sans-serif;
+        }
+
         header {
             background: #008080;
-            width: 30%;
+            width: 40%;
             margin: auto;
             border-radius: 20px;
             color: white;
             text-align: center;
             font-size: 30px;
             padding: 20px;
-            margin-top: -10px;
             margin-bottom: 30px;
             font-family: "Arial Black";
             box-shadow: 5px 5px 20px black;
@@ -29,31 +35,49 @@
             cursor: pointer;
         }
 
-        body {
-            background: #222222;
+        .pic-container {
             text-align: center;
-            animation: fadeout 2s;
         }
 
-        .pic-container {
-            display: block;
-            margin: auto;
-            width: fit-content;
+        .pic-container a {
+            display: inline-block;
+            margin: 20px;
         }
 
         .pic {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             height: auto;
-            margin: 10px;
             border-radius: 20px;
             box-shadow: 5px 5px 10px cyan;
             transition: 0.50s;
-            display: block;
         }
 
         .pic:hover {
             transform: scale(1.1);
             cursor: pointer;
+        }
+
+        /* Mobile Devices - 1 image per row */
+        @media (max-width: 480px) {
+            .pic-container a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        /* Tablets and iPads - 2 images per row */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .pic-container a {
+                width: 45%;
+            }
+        }
+
+        /* Laptops and Desktops - 3 images per row */
+        @media (min-width: 1025px) {
+            .pic-container a {
+                width: 30%;
+            }
         }
 
         .back-button {
@@ -72,48 +96,11 @@
             background-color: #004d40;
             cursor: pointer;
         }
-
-        /* Mobile Devices */
-        @media (max-width: 480px) {
-            .pic-container {
-                width: 100%;
-            }
-            .pic {
-                width: 90%;
-                margin: auto;
-            }
-        }
-
-        /* Tablets and iPads */
-        @media (min-width: 481px) and (max-width: 1024px) {
-            .pic-container {
-                width: 80%;
-                margin: auto;
-            }
-            .pic {
-                width: 45%;
-                display: inline-block;
-                margin: 10px;
-            }
-        }
-
-        /* Laptops and Desktops */
-        @media (min-width: 1025px) {
-            .pic-container {
-                width: 70%;
-                margin: auto;
-            }
-            .pic {
-                width: 30%;
-                display: inline-block;
-                margin: 15px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        Web Photo Gallery
+        Responsive Photo Gallery
     </header>
 
     <div class="pic-container">
@@ -125,6 +112,6 @@
         <a href="6.html"><img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/6.jpg" class="pic" alt="Image 6"></a>
     </div>
 
-    <a href="pratice work.html" class="back-button">Back to Practice</a>
+    <a href="practice-work.html" class="back-button">Back to Practice</a>
 </body>
 </html>
