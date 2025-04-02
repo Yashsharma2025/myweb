@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -17,6 +17,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            padding: 10px 0;
         }
 
         nav ul {
@@ -87,35 +88,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 80px auto 0 auto;
-        }
-
-        h3 {
-            text-align: center;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        hr {
-            border: 0;
-            border-top: 2px solid #333;
-            width: 50%;
-            margin: 20px auto;
-        }
     </style>
 </head>
-
 <body>
     <nav>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle">&#9776;</button>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="pratice work.html">Practice Work</a></li>
@@ -124,19 +101,15 @@
         </ul>
     </nav>
 
-    <img src="boy.jpg" alt="Profile Image">
-    <p style="text-align:center;">Yash Profile</p>
-    
-    <hr />
-
     <div id="main">
         <h3>About Me</h3>
-        <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life. Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.
-
-        I’ve worked on a variety of projects from ads and social media content to short films and music videos, always aiming to tell a story visually. What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.
-
-        Ultimately, for me, it’s all about blending creativity with technology to produce something that stands out and speaks to people. I’m always looking forward to new challenges and opportunities to keep pushing my skills further!</p>
+        <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals...</p>
     </div>
-</body>
 
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector("nav ul").classList.toggle("active");
+        });
+    </script>
+</body>
 </html>
