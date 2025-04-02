@@ -11,78 +11,6 @@
             padding: 0;
         }
 
-        nav {
-            background-color: black;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        nav ul li {
-            display: inline-block;
-        }
-
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 14px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: black;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-                background-color: black;
-                color: white;
-                border: none;
-            }
-        }
-
         h1 {
             text-align: center;
             background-color: #333;
@@ -118,21 +46,27 @@
             background-color: white;
             border-radius: 5px;
         }
+
+        #home, #image-gallery, #list-html, #table, #login-form, #banner {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button-container a {
+                width: 80%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-        <button class="menu-toggle">☰</button>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index2.html">Image Gallery</a></li>
-            <li><a href="list.html">List in HTML</a></li>
-            <li><a href="#table">Table</a></li>
-            <li><a href="#login-form">Login Form</a></li>
-            <li><a href="#banner">Creating Banner in HTML</a></li>
-        </ul>
-    </nav>
 
     <h1>Practice Work</h1>
 
@@ -169,6 +103,11 @@
     <div id="banner">
         <h2>Creating Banner in HTML</h2>
     </div>
+
+    <div id="home">
+        <h2>Home</h2>
+    </div>
+
 </body>
 
 </html>
