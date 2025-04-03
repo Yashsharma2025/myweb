@@ -25,22 +25,18 @@
         th {
             background-color: #f2f2f2;
         }
-        .title-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 10px;
-        }
         .title {
             font-size: 22px;
             font-weight: bold;
+            text-align: center;
         }
         td:hover {
             background-color: yellow;
             transition: background-color 0.3s ease;
         }
         .back-button {
+            display: inline-block;
+            margin: 20px;
             padding: 10px 20px;
             font-size: 16px;
             background-color: black;
@@ -54,12 +50,12 @@
     </style>
 </head>
 <body>
-    <div class="title-container">
-        <span class="title">Student Mark Sheet</span>
-        <a href="practice.html" class="back-button">Back</a>
-    </div>
+    <a href="practice.html" class="back-button">Back</a>
     <div class="table-container">
         <table>
+            <tr>
+                <th colspan="7" class="title">Student Mark Sheet</th>
+            </tr>
             <tr>
                 <th>Roll No.</th>
                 <th>Name</th>
