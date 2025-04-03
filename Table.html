@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mark Sheet</title>
+    <title>Marks Sheet</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
         }
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-        }
         table {
-            width: 70%;
-            margin: auto;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
-            font-size: 18px;
-            text-align: left;
-            min-width: 600px;
+            background: white;
         }
         th, td {
             border: 1px solid black;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .title {
-            font-size: 22px;
-            font-weight: bold;
+            padding: 10px;
             text-align: center;
         }
-        td:hover {
-            background-color: yellow;
-            transition: background-color 0.3s ease;
+        th {
+            background-color: black;
+            color: white;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px;
+        }
+        .back-button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
+    <a href="practice.html" class="back-button">Back</a>
     <div class="table-container">
         <table>
             <tr>
