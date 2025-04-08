@@ -3,10 +3,23 @@
 
 <head>
     <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
             background-color: #f4f4f4;
         }
 
@@ -81,11 +94,13 @@
 
         #main {
             width: 80%;
-            margin: 80px auto 20px auto;
+            max-width: 800px;
+            margin: 20px auto 40px auto;
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            flex: 1;
         }
 
         img {
@@ -93,21 +108,25 @@
             height: 150px;
             border-radius: 50%;
             display: block;
-            margin: 80px auto 0 auto;
+            margin: 100px auto 0 auto;
         }
 
         p.profile-name {
             text-align: center;
             font-weight: bold;
             font-size: 18px;
+            margin-top: 10px;
         }
 
         h3 {
             text-align: center;
+            margin-bottom: 10px;
         }
 
         p {
             text-align: justify;
+            margin-bottom: 10px;
+            line-height: 1.6;
         }
 
         hr {
@@ -115,6 +134,40 @@
             border-top: 2px solid #333;
             width: 50%;
             margin: 20px auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 35px 10px 30px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ffe600;
+        }
+
+        @media (min-width: 600px) {
+            .footer-links {
+                flex-direction: row;
+                justify-content: center;
+                gap: 25px;
+            }
         }
     </style>
 </head>
@@ -130,19 +183,31 @@
         </ul>
     </nav>
 
-    <img src="boy.jpg" alt="Profile Image">
+    <img src="images/boy2.jpg" alt="Profile Image">
     <p class="profile-name">Yash Profile</p>
-    
+
     <hr />
 
     <div id="main">
         <h3>About Me</h3>
-        <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life. Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.</p>
-        
-        <p>I’ve worked on a variety of projects from ads and social media content to short films and music videos, always aiming to tell a story visually. What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.</p>
-        
-        <p>Ultimately, for me, it’s all about blending creativity with technology to produce something that stands out and speaks to people. I’m always looking forward to new challenges and opportunities to keep pushing my skills further!</p>
+        <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life.</p>
+
+        <p>Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.</p>
+
+        <p>What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.</p>
     </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="praice work.html">Practice Work</a>
+            <a href="News.Html">News</a>
+            <a href="Table.html">Table</a>
+            <a href="list.html">List</a>
+            <a href="login.html">Login</a>
+            <a href="banner.html">Banner</a>
+        </div>
+        <p>© 2025 Yash Sharma • All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>
