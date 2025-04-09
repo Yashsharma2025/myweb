@@ -1,213 +1,263 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title>Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-        }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+    }
 
-        body {
-            background-color: #f4f4f4;
-        }
+    nav {
+      background-color: black;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
 
-        nav {
-            background-color: black;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      transition: 0.3s;
+    }
 
-        nav ul li {
-            display: inline-block;
-        }
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
 
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    .menu-toggle {
+      display: none;
+    }
 
-        nav ul li a:hover {
-            background-color: white;
-            color: black;
-        }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        padding: 14px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
 
-        .menu-toggle {
-            display: none;
-        }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+      }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-                background-color: black;
-                color: white;
-                font-size: 24px;
-                border: none;
-                cursor: pointer;
-                padding: 14px;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-            }
+      nav:hover ul {
+        display: flex;
+      }
+    }
 
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: black;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-            }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 100px auto 0 auto;
+    }
 
-            nav:hover ul {
-                display: flex;
-            }
-        }
+    p.profile-name {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
 
-        #main {
-            width: 80%;
-            max-width: 800px;
-            margin: 20px auto 40px auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            flex: 1;
-        }
+    hr {
+      border: 0;
+      border-top: 2px solid #333;
+      width: 50%;
+      margin: 20px auto;
+    }
 
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 100px auto 0 auto;
-        }
+    #main {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto 0;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      flex: 1;
+    }
 
-        p.profile-name {
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 10px;
-        }
+    h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-        h3 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
-        p {
-            text-align: justify;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
+    /* Skills Section */
+    .skills-section {
+      margin-top: 40px;
+      text-align: center;
+    }
 
-        hr {
-            border: 0;
-            border-top: 2px solid #333;
-            width: 50%;
-            margin: 20px auto;
-        }
+    .skills-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #ccc;
-            padding: 35px 10px 30px;
-            font-size: 14px;
-            text-align: center;
-        }
+    .skills-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: 0.2s;
-        }
+    .skill img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
 
-        .footer-links a:hover {
-            color: #ffe600;
-        }
+    .skill-name {
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-        @media (min-width: 600px) {
-            .footer-links {
-                flex-direction: row;
-                justify-content: center;
-                gap: 25px;
-            }
-        }
-    </style>
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 35px 10px 30px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffe600;
+    }
+
+    @media (min-width: 600px) {
+      .footer-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <nav>
-        <button class="menu-toggle">☰</button>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="pratice work.html">Practice Work</a></li>
-            <li><a href="index2.html" target="_blank">Photos</a></li>
-            <li><a href="#">Videos</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <button class="menu-toggle">☰</button>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="pratice work.html">Practice Work</a></li>
+      <li><a href="index2.html" target="_blank">Photos</a></li>
+      <li><a href="#">Videos</a></li>
+    </ul>
+  </nav>
 
-    <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/boy.jpg" alt="Profile Image">
-    <p class="profile-name">Yash Profile</p>
+  <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/boy.jpg" alt="Profile Image">
+  <p class="profile-name">Yash Profile</p>
 
-    <hr />
+  <hr />
 
-    <div id="main">
-        <h3>About Me</h3>
-        <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life.</p>
+  <div id="main">
+    <h3>About Me</h3>
+    <p>Hi, I’m Yash Sharma, a VFX and graphic designer with a passion for creating eye-catching visuals. I specialize in using tools like Adobe Photoshop, After Effects, Illustrator, and Premiere Pro to bring ideas to life.</p>
 
-        <p>Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.</p>
+    <p>Whether it's photo manipulation in Photoshop, crafting animations in After Effects, or designing logos in Illustrator, I love the process of turning creative concepts into reality.</p>
 
-        <p>What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.</p>
-    </div>
+    <p>What excites me most about design is how endless the possibilities are to experiment, learn, and grow with new tools and techniques.</p>
 
-    <footer>
-        <div class="footer-links">
-            <a href="pratice work.html">Practice Work</a>
-            <a href="News.Html">News</a>
-            <a href="Table.html">Table</a>
-            <a href="list.html">List</a>
-            <a href="login.html">Login</a>
-            <a href="banner.html">Banner</a>
+    <div class="skills-section">
+      <div class="skills-title">My Skills</div>
+      <div class="skills-icons">
+        <div class="skill">
+          <img src="images/illustrator.png" alt="Illustrator">
+          <div class="skill-name">Illustrator</div>
         </div>
-        <p>© 2025 Yash Sharma • All Rights Reserved</p>
-    </footer>
-</body>
+        <div class="skill">
+          <img src="images/photoshop.png" alt="Photoshop">
+          <div class="skill-name">Photoshop</div>
+        </div>
+        <div class="skill">
+          <img src="images/aftereffects.png" alt="After Effects">
+          <div class="skill-name">After Effects</div>
+        </div>
+        <div class="skill">
+          <img src="images/premierepro.png" alt="Premiere Pro">
+          <div class="skill-name">Premiere Pro</div>
+        </div>
+        <div class="skill">
+          <img src="images/html.png" alt="HTML">
+          <div class="skill-name">HTML</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <footer>
+    <div class="footer-links">
+      <a href="pratice work.html">Practice Work</a>
+      <a href="news.html">News</a>
+      <a href="table.html">Table</a>
+      <a href="list.html">List</a>
+      <a href="login.html">Login</a>
+      <a href="banner.html">Banner</a>
+    </div>
+    <p>© 2025 Yash Sharma • All Rights Reserved</p>
+  </footer>
+</body>
 </html>
