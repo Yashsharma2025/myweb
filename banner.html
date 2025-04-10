@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gin Banner</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #111;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+      z-index: 10;
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    .banner {
+      width: 980px;
+      height: 500px;
+      margin-top: 30px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 30px #444;
+      border-radius: 12px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      opacity: 0;
+      animation: change 15s infinite;
+    }
+
+    @keyframes change {
+      0%, 100% { opacity: 0; }
+      10%, 30% { opacity: 1; }
+      40%, 90% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-button" href="pratice.html">← Back</a>
+
+  <div class="banner">
+    <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/p1.gif" alt="Banner 1" style="animation-delay: 0s;">
+    <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/p2.gif alt="Banner 2" style="animation-delay: 5s;">
+    <img src="https://raw.githubusercontent.com/Yashsharma2025/myweb/main/p3.gif alt="Banner 3" style="animation-delay: 10s;">
+  </div>
+
+</body>
+</html>
