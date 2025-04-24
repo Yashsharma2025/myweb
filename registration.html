@@ -1,0 +1,157 @@
+<html>
+<head>
+  <title>Registration</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f1f5f9;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e40af;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background: #f9fafb;
+      transition: 0.2s ease;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    input[type="number"];
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #3b82f6;
+     
+    }
+
+    .gender, .hobbies {
+      margin-top: 6px;
+    }
+
+    .gender label,
+    .hobbies label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .button-row {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    input[type="submit"] {
+      background-color: #ef6c00;
+    }
+
+    input[type="reset"] {
+      background-color: #2563eb;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e65100;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Register</h2>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Your name" required>
+
+    <label>Age:</label>
+    <input type="number" placeholder="16 to 50" min="16" max="50" required>
+
+    <label>Message:</label>
+    <textarea placeholder="Write something..."></textarea>
+
+    <label>Email:</label>
+    <input type="email" placeholder="your@email.com" required>
+
+    <label>Gender:</label>
+    <div class="gender">
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label>Hobbies:</label>
+    <div class="hobbies">
+      <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+      <label><input type="checkbox" name="hobby" value="dancing"> Dancing</label>
+      <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+      <label><input type="checkbox" name="hobby" value="cooking"> Cooking</label>
+    </div>
+
+    <div class="button-row">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+    </div>
+  </form>
+
+</body>
+</html>
